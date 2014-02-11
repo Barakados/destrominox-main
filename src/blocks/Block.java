@@ -1,45 +1,14 @@
 package blocks;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class Block extends Sprite {
-
-	public Block() {
-		// TODO Auto-generated constructor stub
+public Texture texture;
+	public Block(float x, float y) {
+		Texture.setEnforcePotImages(false);
+		texture = new Texture(Gdx.files.internal("tiles/floor.png"));
+		this.translate(x,  y);
 	}
-
-	public Block(Texture texture) {
-		super(texture);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Block(TextureRegion region) {
-		super(region);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Block(Sprite sprite) {
-		super(sprite);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Block(Texture texture, int srcWidth, int srcHeight) {
-		super(texture, srcWidth, srcHeight);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Block(Texture texture, int srcX, int srcY, int srcWidth,
-			int srcHeight) {
-		super(texture, srcX, srcY, srcWidth, srcHeight);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Block(TextureRegion region, int srcX, int srcY, int srcWidth,
-			int srcHeight) {
-		super(region, srcX, srcY, srcWidth, srcHeight);
-		// TODO Auto-generated constructor stub
-	}
-
 }
